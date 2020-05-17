@@ -1,0 +1,17 @@
+[
+  {
+    "id": 10,
+    "name": "Oficial",
+    "amount": 0.0
+  },
+  {
+    "id": 20,
+    "name": "Residente",
+    "amount": 0.05
+  },
+  {
+    "id": 30,
+    "name": "Visitante",
+    "amount": 0.5
+  }
+]

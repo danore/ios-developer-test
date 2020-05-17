@@ -1,0 +1,22 @@
+[
+ {
+   "name": "AGREGAR OFICIALES",
+   "icon": "car.fill",
+   "type": 10
+ },
+ {
+   "name": "AGREGAR RESIDENTES",
+   "icon": "car.fill",
+   "type": 20
+ },
+ {
+   "name": "COMENZAR MES",
+   "icon": "arrow.clockwise",
+   "type": 40
+ },
+ {
+   "name": "PAGO RESIDENTE",
+   "icon": "dollarsign.circle",
+   "type": 50
+ }
+]
