@@ -14,7 +14,7 @@ class VehicleViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnAdd: UIButton!
     
-    var list = [StaySource]()
+    private var list = [StaySource]()
     var typeId: Int = TypeUtil.TYPE_OFFICAL
     
     override func viewDidLoad() {
@@ -28,7 +28,13 @@ class VehicleViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBAction func add(_ sender: UIButton) {
-        self.openAction()
+        let alertCtrl = self.alertController
+        alertCtrl.typeId = self.typeId
+        alertCtrl.callback = {
+            self.loadData()
+        }
+        
+        self.present(alertCtrl, animated: true, completion: nil)
     }
     
     /// Initialize screen
@@ -96,21 +102,6 @@ class VehicleViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
-    }
-    
-    private func openAction() {
-        let customAlert = self.storyboard?.instantiateViewController(withIdentifier: TypeUtil.CONTROLLER_ACTION) as! ActionViewController
-        customAlert.providesPresentationContextTransitionStyle = true
-        customAlert.definesPresentationContext = true
-        customAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        customAlert.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-        customAlert.typeId = self.typeId
-        
-        customAlert.callback = {
-            self.loadData()
-        }
-        
-        self.present(customAlert, animated: true, completion: nil)
     }
     
 }

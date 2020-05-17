@@ -13,7 +13,6 @@
 		528DB736246EF0BE001DB27C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528DB734246EF0BE001DB27C /* Main.storyboard */; };
 		528DB738246EF0C2001DB27C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528DB737246EF0C2001DB27C /* Assets.xcassets */; };
 		528DB73B246EF0C2001DB27C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528DB739246EF0C2001DB27C /* LaunchScreen.storyboard */; };
-		528DB749246F0179001DB27C /* vehiclesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DB748246F0179001DB27C /* vehiclesTests.swift */; };
 		528DB758246F0B59001DB27C /* VehicleSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DB757246F0B59001DB27C /* VehicleSource.swift */; };
 		528DB75B246F0E86001DB27C /* TypeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DB75A246F0E86001DB27C /* TypeUtil.swift */; };
 		528DB75D246F0F81001DB27C /* TypeVehicleSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DB75C246F0F81001DB27C /* TypeVehicleSource.swift */; };
@@ -22,8 +21,6 @@
 		528DB763246F1966001DB27C /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DB762246F1966001DB27C /* VehicleModel.swift */; };
 		528DB766246F251D001DB27C /* types.json in Resources */ = {isa = PBXBuildFile; fileRef = 528DB765246F251D001DB27C /* types.json */; };
 		528DB768246F252A001DB27C /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DB767246F252A001DB27C /* JsonUtil.swift */; };
-		528DB76B246F2A92001DB27C /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DB76A246F2A92001DB27C /* TabViewController.swift */; };
-		528DB76D246F563A001DB27C /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DB76C246F563A001DB27C /* MainTabViewController.swift */; };
 		528DB770246F60ED001DB27C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DB76F246F60ED001DB27C /* MainViewController.swift */; };
 		528DB772246F6124001DB27C /* MenuCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DB771246F6124001DB27C /* MenuCollectionCell.swift */; };
 		528DB774246F6B4C001DB27C /* ExtensionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DB773246F6B4C001DB27C /* ExtensionUtil.swift */; };
@@ -36,16 +33,6 @@
 		52F116122470BF89001D31B4 /* BillTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F116112470BF89001D31B4 /* BillTableCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		528DB74B246F0179001DB27C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 528DB723246EF0BE001DB27C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 528DB72A246EF0BE001DB27C;
-			remoteInfo = vehicles;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		528DB72B246EF0BE001DB27C /* vehicles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vehicles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528DB72E246EF0BE001DB27C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +41,6 @@
 		528DB737246EF0C2001DB27C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		528DB73A246EF0C2001DB27C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		528DB73C246EF0C2001DB27C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		528DB746246F0179001DB27C /* vehiclesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vehiclesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		528DB748246F0179001DB27C /* vehiclesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehiclesTests.swift; sourceTree = "<group>"; };
 		528DB74A246F0179001DB27C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		528DB757246F0B59001DB27C /* VehicleSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleSource.swift; sourceTree = "<group>"; };
@@ -65,8 +51,6 @@
 		528DB762246F1966001DB27C /* VehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
 		528DB765246F251D001DB27C /* types.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = types.json; sourceTree = "<group>"; };
 		528DB767246F252A001DB27C /* JsonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
-		528DB76A246F2A92001DB27C /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
-		528DB76C246F563A001DB27C /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		528DB76F246F60ED001DB27C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		528DB771246F6124001DB27C /* MenuCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionCell.swift; sourceTree = "<group>"; };
 		528DB773246F6B4C001DB27C /* ExtensionUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUtil.swift; sourceTree = "<group>"; };
@@ -88,13 +72,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				391CE8E9572AC51557472EDF /* Pods_vehicles.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		528DB743246F0179001DB27C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				528DB72B246EF0BE001DB27C /* vehicles.app */,
-				528DB746246F0179001DB27C /* vehiclesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,7 +140,6 @@
 				528DB781246F84CF001DB27C /* ActionViewController */,
 				528DB77B246F7A66001DB27C /* VehicleViewController */,
 				528DB76E246F60DE001DB27C /* MainViewController */,
-				528DB769246F2A55001DB27C /* TabViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -205,15 +180,6 @@
 				528DB765246F251D001DB27C /* types.json */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		528DB769246F2A55001DB27C /* TabViewController */ = {
-			isa = PBXGroup;
-			children = (
-				528DB76A246F2A92001DB27C /* TabViewController.swift */,
-				528DB76C246F563A001DB27C /* MainTabViewController.swift */,
-			);
-			path = TabViewController;
 			sourceTree = "<group>";
 		};
 		528DB76E246F60DE001DB27C /* MainViewController */ = {
@@ -290,24 +256,6 @@
 			productReference = 528DB72B246EF0BE001DB27C /* vehicles.app */;
 			productType = "com.apple.product-type.application";
 		};
-		528DB745246F0179001DB27C /* vehiclesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 528DB74F246F0179001DB27C /* Build configuration list for PBXNativeTarget "vehiclesTests" */;
-			buildPhases = (
-				528DB742246F0179001DB27C /* Sources */,
-				528DB743246F0179001DB27C /* Frameworks */,
-				528DB744246F0179001DB27C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				528DB74C246F0179001DB27C /* PBXTargetDependency */,
-			);
-			name = vehiclesTests;
-			productName = vehiclesTests;
-			productReference = 528DB746246F0179001DB27C /* vehiclesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -320,10 +268,6 @@
 				TargetAttributes = {
 					528DB72A246EF0BE001DB27C = {
 						CreatedOnToolsVersion = 11.2.1;
-					};
-					528DB745246F0179001DB27C = {
-						CreatedOnToolsVersion = 11.2.1;
-						TestTargetID = 528DB72A246EF0BE001DB27C;
 					};
 				};
 			};
@@ -341,7 +285,6 @@
 			projectRoot = "";
 			targets = (
 				528DB72A246EF0BE001DB27C /* vehicles */,
-				528DB745246F0179001DB27C /* vehiclesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -356,13 +299,6 @@
 				528DB738246EF0C2001DB27C /* Assets.xcassets in Resources */,
 				528DB736246EF0BE001DB27C /* Main.storyboard in Resources */,
 				528DB766246F251D001DB27C /* types.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		528DB744246F0179001DB27C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,34 +363,16 @@
 				528DB761246F1478001DB27C /* StayModel.swift in Sources */,
 				528DB75D246F0F81001DB27C /* TypeVehicleSource.swift in Sources */,
 				528DB731246EF0BE001DB27C /* SceneDelegate.swift in Sources */,
-				528DB76D246F563A001DB27C /* MainTabViewController.swift in Sources */,
 				52F116122470BF89001D31B4 /* BillTableCell.swift in Sources */,
 				528DB77F246F7C94001DB27C /* VehicleTableCell.swift in Sources */,
 				528DB763246F1966001DB27C /* VehicleModel.swift in Sources */,
 				528DB783246F88A1001DB27C /* ActionViewController.swift in Sources */,
 				528DB758246F0B59001DB27C /* VehicleSource.swift in Sources */,
-				528DB76B246F2A92001DB27C /* TabViewController.swift in Sources */,
 				528DB768246F252A001DB27C /* JsonUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		528DB742246F0179001DB27C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				528DB749246F0179001DB27C /* vehiclesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		528DB74C246F0179001DB27C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 528DB72A246EF0BE001DB27C /* vehicles */;
-			targetProxy = 528DB74B246F0179001DB27C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		528DB734246EF0BE001DB27C /* Main.storyboard */ = {
@@ -630,46 +548,6 @@
 			};
 			name = Release;
 		};
-		528DB74D246F0179001DB27C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F4LTESUMQF;
-				INFOPLIST_FILE = vehiclesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hugo.vehiclesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vehicles.app/vehicles";
-			};
-			name = Debug;
-		};
-		528DB74E246F0179001DB27C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F4LTESUMQF;
-				INFOPLIST_FILE = vehiclesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hugo.vehiclesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vehicles.app/vehicles";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -687,15 +565,6 @@
 			buildConfigurations = (
 				528DB740246EF0C2001DB27C /* Debug */,
 				528DB741246EF0C2001DB27C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		528DB74F246F0179001DB27C /* Build configuration list for PBXNativeTarget "vehiclesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				528DB74D246F0179001DB27C /* Debug */,
-				528DB74E246F0179001DB27C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

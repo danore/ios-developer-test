@@ -15,8 +15,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var viewEntry: UIView!
     @IBOutlet weak var viewDeparture: UIView!
     
-    var screenSize: CGRect!
-    var list = [MenuEntity]()
+    private var screenSize: CGRect!
+    private var list = [MenuEntity]()
+    
     var typeId = TypeUtil.TYPE_OFFICAL
     
     override func viewDidLoad() {
@@ -37,7 +38,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     /// Initialize screen
     private func initialize() {
-        self.createMenu()
+        self.list = JsonUtil.readMenu(TypeUtil.FILE_MENU)
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -57,21 +58,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.collectionView!.collectionViewLayout = layout
         self.viewEntry.layer.cornerRadius = 4
         self.viewDeparture.layer.cornerRadius = 4
-    }
-    
-    
-    /// Create menu
-    private func createMenu() {
-        let json = JsonUtil.readJson(TypeUtil.FILE_MENU)
-     
-        for info in json.arrayValue {
-            let entity = MenuEntity()
-            entity.name = info["name"].stringValue
-            entity.icon = info["icon"].stringValue
-            entity.type = info["type"].intValue
-            
-            self.list.append(entity)
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -124,14 +110,10 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     /// Open alert
     private func openAction() {
-        let customAlert = self.storyboard?.instantiateViewController(withIdentifier: TypeUtil.CONTROLLER_ACTION) as! ActionViewController
-        customAlert.providesPresentationContextTransitionStyle = true
-        customAlert.definesPresentationContext = true
-        customAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        customAlert.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-        customAlert.typeId = self.typeId
+        let alertCtrl = self.alertController
+        alertCtrl.typeId = self.typeId
         
-        self.present(customAlert, animated: true, completion: nil)
+        self.present(alertCtrl, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

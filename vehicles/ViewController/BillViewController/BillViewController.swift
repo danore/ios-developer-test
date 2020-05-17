@@ -13,7 +13,7 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    var list = [StaySource]()
+    private var list = [StaySource]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

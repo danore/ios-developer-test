@@ -13,7 +13,7 @@ protocol MaterialView {
 }
 
 extension UIView: MaterialView {
-
+    
     /// Elevate view
     ///
     /// - Parameter elevation: Double
@@ -46,7 +46,7 @@ extension UIView: MaterialView {
         
         self.layer.addSublayer(shapeLayer)
     }
-
+    
 }
 
 extension UIColor {
@@ -81,7 +81,7 @@ extension Date {
     
     func minutes(_ start: Date, end: Date) -> Int {
         let diff = Int(end.timeIntervalSince1970 - start.timeIntervalSince1970)
-
+        
         let hours = diff / 3600
         let minutes = (diff - hours * 3600) / 60
         return minutes
@@ -157,7 +157,37 @@ extension UIViewController: UITextFieldDelegate, UITextViewDelegate {
         
         self.present(alert, animated: true, completion: nil)
     }
-
+    
+    var alertController: ActionViewController {
+        let customAlert = self.storyboard?.instantiateViewController(withIdentifier: TypeUtil.CONTROLLER_ACTION) as! ActionViewController
+        customAlert.providesPresentationContextTransitionStyle = true
+        customAlert.definesPresentationContext = true
+        customAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        customAlert.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        
+        return customAlert
+    }
+    
+    /// Up scroll by keyboard
+    /// - Parameters:
+    ///   - notification: NSNotification
+    ///   - scrollView: UIScrollView
+    func keyboardShow(_ notification: NSNotification, scrollView: UIScrollView)->UIEdgeInsets {
+        let userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset: UIEdgeInsets = scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 40
+        
+        return contentInset
+    }
+    
+    func keyboardHide(_ notification: NSNotification)->UIEdgeInsets {
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        
+        return contentInset
+    }
 }
 
 extension Double {
@@ -167,7 +197,7 @@ extension Double {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = NSLocale(localeIdentifier: "en_US") as Locale?
-       
+        
         return formatter.string(from: NSNumber(value: self))!
     }
     

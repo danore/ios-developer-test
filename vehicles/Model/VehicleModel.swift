@@ -102,14 +102,10 @@ class VehicleModel {
     }
     
     /// Remove vehicle
-    /// - Parameters:
-    ///   - vehicle: VehicleSource
-    ///   - completion: Bool success
-    func remove(_ vehicle: VehicleSource, completion: @escaping (Bool) -> ()) {
+    /// - Parameter vehicle: VehicleSource
+    func remove(_ vehicle: VehicleSource) {
         let realm = try! Realm()
         realm.delete(vehicle)
-        
-        completion(true)
     }
     
 }

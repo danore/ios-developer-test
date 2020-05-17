@@ -213,20 +213,14 @@ class ActionViewController: UIViewController {
     ///
     /// - Parameter notification: NSNotification
     @objc func keyboardWillShow(_ notification: NSNotification){
-        let userInfo = notification.userInfo!
-        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-        
-        var contentInset:UIEdgeInsets = self.scrollView.contentInset
-        contentInset.bottom = keyboardFrame.size.height + 40
-        scrollView.contentInset = contentInset
+        self.scrollView.contentInset = self.keyboardShow(notification, scrollView: self.scrollView)
     }
     
     /// Adjust keyboard to field text hide
     ///
     /// - Parameter notification: NSNotification
     @objc func keyboardWillHide(_ notification: NSNotification){
-        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
-        scrollView.contentInset = contentInset
+        self.scrollView.contentInset = self.keyboardHide(notification)
     }
+    
 }

@@ -91,10 +91,9 @@ class StayModel {
                     realm.add(vehicle)
                     
                     if !isParked && vehicle.type?.id == TypeUtil.TYPE_VISITOR {
-                        
-                        VehicleModel.instance.remove(vehicle) { (success) in
+                        self.remove(stay!) { (success) in
                             if success {
-                                self.remove(stay!)
+                                VehicleModel.instance.remove(vehicle)
                             }
                         }
                     }
@@ -150,10 +149,14 @@ class StayModel {
     }
     
     /// Remove stay data
-    /// - Parameter stay: StaySource
-    func remove(_ stay: StaySource) {
+    /// - Parameters:
+    ///   - stay: StaySource
+    ///   - completion: Bool
+    func remove(_ stay: StaySource, completion: @escaping (Bool) -> ()) {
         let realm = try! Realm()
         realm.delete(stay)
+        
+        completion(true)
     }
     
     /// Start month data
